@@ -1,0 +1,3938 @@
+[
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AdminAgencyClosureController",
+    "Method": "getAAClosures",
+    "RelativePath": "api/AdminAgencyClosure/AAClosures",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AdminAgencyClosureController",
+    "Method": "addAAClosure",
+    "RelativePath": "api/AdminAgencyClosure/AAClosures",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "closure",
+        "Type": "AgencyAdmins.Model.Closure",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AdminAgencyClosureController",
+    "Method": "delAAClosure",
+    "RelativePath": "api/AdminAgencyClosure/AAClosures",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "closure",
+        "Type": "AgencyAdmins.Model.Closure",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyController",
+    "Method": "addAARCAgency",
+    "RelativePath": "api/Agency/addAgency",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "agency",
+        "Type": "AgencyAdmins.Model.Agency",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyController",
+    "Method": "getAllAARCAgencies",
+    "RelativePath": "api/Agency/Agencies",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyController",
+    "Method": "getAgenciesByUserID",
+    "RelativePath": "api/Agency/AgenciesByUser/{userID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyController",
+    "Method": "addAgencyDox",
+    "RelativePath": "api/Agency/AgencyDox",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sAttachment",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sAttachmentFilename",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyController",
+    "Method": "AgencyIDExists",
+    "RelativePath": "api/Agency/agencyIdExist/{agencyID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "agencyID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyController",
+    "Method": "ArchiveAgency",
+    "RelativePath": "api/Agency/archiveAgency/{agencyID}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "agencyID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyController",
+    "Method": "arcAARCAgency",
+    "RelativePath": "api/Agency/ArchiveAgency/{AgencyID}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AgencyID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyController",
+    "Method": "getAgencyInfoByID",
+    "RelativePath": "api/Agency/GetAgency/{AgencyID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AgencyID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyController",
+    "Method": "getAgencyContactInfo",
+    "RelativePath": "api/Agency/GetAgencyContactInfo/{agencyID}/{contactID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "agencyID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "contactID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyController",
+    "Method": "getAgencyContacts",
+    "RelativePath": "api/Agency/GetAgencyContacts/{agencyID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "agencyID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyController",
+    "Method": "updAARCAgency",
+    "RelativePath": "api/Agency/updateAgency",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "agency",
+        "Type": "AgencyAdmins.Model.Agency",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyController",
+    "Method": "updAgencyID",
+    "RelativePath": "api/Agency/UpdateAgencyId/{CurID}/{NewID}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sCurID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sNewID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CurID",
+        "Type": "",
+        "IsRequired": true
+      },
+      {
+        "Name": "NewID",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyCarrierController",
+    "Method": "addAARCAgencyCarrier",
+    "RelativePath": "api/AgencyCarrier",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "agencyCarrier",
+        "Type": "AgencyAdmins.Model.AgencyCarrier",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyCarrierController",
+    "Method": "delAARCAgencyCarrier",
+    "RelativePath": "api/AgencyCarrier",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AgencyID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "CarrierID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyCarrierController",
+    "Method": "getAgencyCarriersByTeamBranch",
+    "RelativePath": "api/AgencyCarrier/{AgencyID}/{UserID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AgencyID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "UserID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyCarrierController",
+    "Method": "addAARCCarrier",
+    "RelativePath": "api/AgencyCarrier/addCarrier",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carrier",
+        "Type": "AgencyAdmins.Model.Carrier",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyCarrierController",
+    "Method": "getAllAARCCarriers",
+    "RelativePath": "api/AgencyCarrier/AllCarriers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyCarrierController",
+    "Method": "arcAARCCarrier",
+    "RelativePath": "api/AgencyCarrier/archiveCarrier/{CarrierID}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CarrierID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyCarrierController",
+    "Method": "getCarrierInfoByID",
+    "RelativePath": "api/AgencyCarrier/carrier/{CarrierID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CarrierID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyCarrierController",
+    "Method": "getAgencyCarriers",
+    "RelativePath": "api/AgencyCarrier/carriers/{AgencyID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AgencyID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyCarrierController",
+    "Method": "getCarrierContactInfo",
+    "RelativePath": "api/AgencyCarrier/ContactInfo/{CarrierID}/{ContactID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CarrierID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "ContactID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyCarrierController",
+    "Method": "getCarrierContacts",
+    "RelativePath": "api/AgencyCarrier/contacts/{CarrierID}/{AgencyID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CarrierID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "AgencyID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyCarrierController",
+    "Method": "updAARCCarrier",
+    "RelativePath": "api/AgencyCarrier/updateCarrier",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carrier",
+        "Type": "AgencyAdmins.Model.Carrier",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyClosuresController",
+    "Method": "addAgencyClosure",
+    "RelativePath": "api/AgencyClosures",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "agencyClosure",
+        "Type": "AgencyAdmins.Model.AgencyClosure",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyClosuresController",
+    "Method": "delAgencyClosure",
+    "RelativePath": "api/AgencyClosures",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "agencyClosure",
+        "Type": "AgencyAdmins.Model.AgencyClosure",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyClosuresController",
+    "Method": "getAgencyClosures",
+    "RelativePath": "api/AgencyClosures/{AgencyID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AgencyID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyContactController",
+    "Method": "addAARCAgencyContact",
+    "RelativePath": "api/AgencyContact",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "agencyContact",
+        "Type": "AgencyAdmins.Model.AgencyContact",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyContactController",
+    "Method": "delAARCAgencyContact",
+    "RelativePath": "api/AgencyContact",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sAgencyID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sContactID",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyContactController",
+    "Method": "updAAContactInfo",
+    "RelativePath": "api/AgencyContact/updAAContactInfo",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "adminAgencyContactInfo",
+        "Type": "AgencyAdmins.Model.AdminAgencyContactInfo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyContactController",
+    "Method": "updAARCAgencyContact",
+    "RelativePath": "api/AgencyContact/updAARCAgencyContact/{ContactID}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ContactID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "agencyContact",
+        "Type": "AgencyAdmins.Model.AgencyContact",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyContactController",
+    "Method": "updAARCAgencyContactOrder",
+    "RelativePath": "api/AgencyContact/UpdateAgencyContactOrder",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sAgencyID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sContactID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "iUp",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyHoursController",
+    "Method": "updAgencyHours",
+    "RelativePath": "api/AgencyHours",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "agencyHours",
+        "Type": "AgencyAdmins.Model.AgencyHours",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyHoursController",
+    "Method": "getAgencyHours",
+    "RelativePath": "api/AgencyHours/{AgencyID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AgencyID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AgencyHoursController",
+    "Method": "updAAHours",
+    "RelativePath": "api/AgencyHours/updAAHours",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "agencyHours",
+        "Type": "AgencyAdmins.Model.AgencyHours",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AppController",
+    "Method": "Apps",
+    "RelativePath": "api/App/{userID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sUserID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "userID",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AppController",
+    "Method": "delUserApp",
+    "RelativePath": "api/App/{userID}/{appID}/{secID}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "appID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "secID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AppController",
+    "Method": "addUserApp",
+    "RelativePath": "api/App/Add/{userID}/{appID}/{secID}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "appID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "secID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.AppController",
+    "Method": "getUserUnavailableApps",
+    "RelativePath": "api/App/UnavailableApps/{userID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sUserID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "userID",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.BambooHRController",
+    "Method": "GetEmpImg",
+    "RelativePath": "api/BambooHR/GetEmpImg",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "EmpId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.BambooHRController",
+    "Method": "GetEmployeeFullInfoList",
+    "RelativePath": "api/BambooHR/GetEmployeeInfoList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "AgencyAdmins.Model.BambooEmpRoot",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.BambooHRController",
+    "Method": "GetWhosOutList",
+    "RelativePath": "api/BambooHR/GetWhosOutList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[AgencyAdmins.Model.WhosOutResponseModel, AgencyAdmins, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.CarrierBranchController",
+    "Method": "addAARCCarrierAllBranchesTypes",
+    "RelativePath": "api/CarrierBranch/addBranch/{CarrierID}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CarrierID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.CarrierBranchController",
+    "Method": "addAARCCarrierBranch",
+    "RelativePath": "api/CarrierBranch/addBranch/{CarrierID}/{BTID}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CarrierID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "BTID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.CarrierBranchController",
+    "Method": "delAARCCarrierBranch",
+    "RelativePath": "api/CarrierBranch/deleteCarrierBranch/{CarrierID}/{BTID}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CarrierID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "BTID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.CarrierBranchController",
+    "Method": "getAllAARCCarrierBranchesTypes",
+    "RelativePath": "api/CarrierBranch/type/{CarrierID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CarrierID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.CarrierBranchController",
+    "Method": "updAARCCarrierType",
+    "RelativePath": "api/CarrierBranch/updateBranch/{CarrierID}/{BTID}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CarrierID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "BTID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.CarrierContactController",
+    "Method": "delAARCCarrierContact",
+    "RelativePath": "api/CarrierContact/{CarrierID}/{ContactID}/{DelSimilar}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CarrierID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "ContactID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "DelSimilar",
+        "Type": "System.Boolean",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.CarrierContactController",
+    "Method": "delAARCCarrierContactByAgencyID",
+    "RelativePath": "api/CarrierContact/{ContactID}/{AgencyID}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sContactID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sAgencyID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContactID",
+        "Type": "",
+        "IsRequired": true
+      },
+      {
+        "Name": "AgencyID",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.CarrierContactController",
+    "Method": "addAARCCarrierContact",
+    "RelativePath": "api/CarrierContact/addCarrierContact",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carrierContact",
+        "Type": "AgencyAdmins.Model.CarrierContact",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.CarrierContactController",
+    "Method": "getAARCSimilarCarrierContacts",
+    "RelativePath": "api/CarrierContact/similarCarrierContact/{ContactID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ContactID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.CarrierContactController",
+    "Method": "updAARCCarrierContact",
+    "RelativePath": "api/CarrierContact/updateCarrierContact",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carrierContact",
+        "Type": "AgencyAdmins.Model.CarrierContact",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.DirectoryController",
+    "Method": "addAARCDirectoryContact",
+    "RelativePath": "api/Directory/addDirectoryContacts",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "directoryContact",
+        "Type": "AgencyAdmins.Model.DirectoryContact",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.DirectoryController",
+    "Method": "getDirectoryContactInfo",
+    "RelativePath": "api/Directory/DirectoryContactInfo/{DirectoryID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "DirectoryID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.DirectoryController",
+    "Method": "updAARCDirectoryContact",
+    "RelativePath": "api/Directory/DirectoryContacts",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "directoryContact",
+        "Type": "AgencyAdmins.Model.DirectoryContact",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.DirectoryController",
+    "Method": "delAARCDirectoryContact",
+    "RelativePath": "api/Directory/DirectoryContacts",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "iDirectoryID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.DirectoryController",
+    "Method": "getDirectoryContacts",
+    "RelativePath": "api/Directory/DirectoryContacts/{AgencyID}/{CarrierID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AgencyID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "CarrierID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.DocumentController",
+    "Method": "getAARCDox",
+    "RelativePath": "api/Document",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.DocumentController",
+    "Method": "addAARCDox",
+    "RelativePath": "api/Document",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "document",
+        "Type": "AgencyAdmins.Model.Document",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.DocumentController",
+    "Method": "delAARCDox",
+    "RelativePath": "api/Document/{Filename}/{Cat}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Filename",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Cat",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.DocumentController",
+    "Method": "updAARCDox",
+    "RelativePath": "api/Document/{Filename}/{Cat}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Filename",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Cat",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.DocumentController",
+    "Method": "getDocCats",
+    "RelativePath": "api/Document/DocCategory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.ForgetPasswordController",
+    "Method": "SendPassword",
+    "RelativePath": "api/ForgetPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "mailRequest",
+        "Type": "AgencyAdmins.Model.MailRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.ForgetPasswordController",
+    "Method": "SendSupportEmail",
+    "RelativePath": "api/ForgetPassword/SendSupportEmail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objemail",
+        "Type": "AgencyAdmins.Model.SupportEmail",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.ForgetPasswordController",
+    "Method": "UpdatePasswordEmail",
+    "RelativePath": "api/ForgetPassword/UpdatePasswordEmail",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objupwd",
+        "Type": "AgencyAdmins.Model.updatePassword",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.InventoryController",
+    "Method": "addInvItem",
+    "RelativePath": "api/Inventory/addInvItem",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "inventory",
+        "Type": "AgencyAdmins.Model.Inventory",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.InventoryController",
+    "Method": "getINVDescs",
+    "RelativePath": "api/Inventory/INVDescs/{Type}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Type",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.InventoryController",
+    "Method": "getInvItemByID",
+    "RelativePath": "api/Inventory/InvItemByID/{iInvID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "iInvID",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.InventoryController",
+    "Method": "getInvItems",
+    "RelativePath": "api/Inventory/InvItems",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "iArchive",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "iOwn",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.InventoryController",
+    "Method": "getINVManus",
+    "RelativePath": "api/Inventory/INVManus",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sDesc",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.InventoryController",
+    "Method": "getINVModels",
+    "RelativePath": "api/Inventory/INVModels",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sDesc",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sManu",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.InventoryController",
+    "Method": "getINVTypes",
+    "RelativePath": "api/Inventory/INVTypes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.InventoryController",
+    "Method": "updInvItem",
+    "RelativePath": "api/Inventory/updInvItem",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "inventory",
+        "Type": "AgencyAdmins.Model.Inventory",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.InventoryController",
+    "Method": "updInvItemArchive",
+    "RelativePath": "api/Inventory/updInvItemArchive/{iInvID}/{bInvArchive}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sInvID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "bInvArchive",
+        "Type": "System.Boolean",
+        "IsRequired": true
+      },
+      {
+        "Name": "iInvID",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.LinkController",
+    "Method": "addAARCLinx",
+    "RelativePath": "api/Link/AddLink",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "link",
+        "Type": "AgencyAdmins.Model.Link",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.LinkController",
+    "Method": "getAARCLinx",
+    "RelativePath": "api/Link/AllLinks/{UserID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "UserID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.LinkController",
+    "Method": "delAARCLinx",
+    "RelativePath": "api/Link/deleteLink",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "link",
+        "Type": "AgencyAdmins.Model.Link",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.MessageController",
+    "Method": "addAARCMsg",
+    "RelativePath": "api/Message",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "message",
+        "Type": "AgencyAdmins.Model.Message",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.MessageController",
+    "Method": "getAARCUsersMsgs",
+    "RelativePath": "api/Message/{ID}/{FromDT}/{ToDT}/{WildCard}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "FromDT",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "ToDT",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "WildCard",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.NewsAndEventController",
+    "Method": "getNewsEvents",
+    "RelativePath": "api/NewsAndEvent",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.NewsAndEventController",
+    "Method": "addAARCNewsEvent",
+    "RelativePath": "api/NewsAndEvent",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "newsEvent",
+        "Type": "AgencyAdmins.Model.NewsEvent",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.NewsAndEventController",
+    "Method": "moveNewsEvents",
+    "RelativePath": "api/NewsAndEvent",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bMoveUp",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "iNewsID",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.NewsAndEventController",
+    "Method": "deleteNewsEvents",
+    "RelativePath": "api/NewsAndEvent/{NewsID}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "NewsID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.ProducerCodeController",
+    "Method": "updProducerCode",
+    "RelativePath": "api/ProducerCode",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "producerCode",
+        "Type": "AgencyAdmins.Model.ProducerCode",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.ProducerCodeController",
+    "Method": "addProducerCode",
+    "RelativePath": "api/ProducerCode",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "producerCodeRequest",
+        "Type": "AgencyAdmins.Model.ProducerCodeRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.ProducerCodeController",
+    "Method": "delProducerCode",
+    "RelativePath": "api/ProducerCode",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "producerCodeRequest",
+        "Type": "AgencyAdmins.Model.ProducerCodeRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.ProducerCodeController",
+    "Method": "getAgencyCarrierProducerCodes",
+    "RelativePath": "api/ProducerCode/{AgencyID}/{CarrierID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "AgencyID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "CarrierID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.ProducerCodeController",
+    "Method": "getProducerCodeDetails",
+    "RelativePath": "api/ProducerCode/ProducerCodeDetails",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "producerCodeRequest",
+        "Type": "AgencyAdmins.Model.ProducerCodeRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.ProducerCodeController",
+    "Method": "getAllProducerCodeGrantedUsers",
+    "RelativePath": "api/ProducerCode/ProducerCodeGrantedUsers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "producerCodeRequest",
+        "Type": "AgencyAdmins.Model.ProducerCodeRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.ProducerCodeController",
+    "Method": "updProducerCode",
+    "RelativePath": "api/ProducerCode/Update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "producerCodeRequest",
+        "Type": "AgencyAdmins.Model.ProducerCodeRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.ProducerCodeCredentialController",
+    "Method": "ImportCreds",
+    "RelativePath": "api/ProducerCodeCredential/{SrcID}/{DestID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "SrcID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "DestID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.ProducerCodeCredentialController",
+    "Method": "getProducerCodeCreds",
+    "RelativePath": "api/ProducerCodeCredential/{sUserID}/{sAgencyID}/{sCarrierID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sUserID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "sAgencyID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "sCarrierID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.ProducerCodeCredentialController",
+    "Method": "updProducerCodeUserCreds",
+    "RelativePath": "api/ProducerCodeCredential/{sUserID}/{sAgencyID}/{sCarrierID}/{sProdCode}/{sPW}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sUserID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "sAgencyID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "sCarrierID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "sProdCode",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "sPCUID",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "sPW",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.RegistryController",
+    "Method": "getAARegistryVal",
+    "RelativePath": "api/Registry/GetRegistery/{key}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "key",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.RegistryController",
+    "Method": "getAARegistryLike",
+    "RelativePath": "api/Registry/GetRegisteryLike/{likeKey}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "likeKey",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.SecutiyController",
+    "Method": "getSecLvlFromCode",
+    "RelativePath": "api/Secutiy/{sCode}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sCode",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.SecutiyController",
+    "Method": "getAllAARCSecurities",
+    "RelativePath": "api/Secutiy/allSecurities",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.StateController",
+    "Method": "getStates",
+    "RelativePath": "api/State",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TeamController",
+    "Method": "getAllAARCTeams",
+    "RelativePath": "api/Team",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TeamController",
+    "Method": "getTeamFromID",
+    "RelativePath": "api/Team/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TeamController",
+    "Method": "addAARCTeamAgency",
+    "RelativePath": "api/Team/addTeamAgency/{TeamID}/{AgyIDs}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TeamID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "AgyIDs",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TeamController",
+    "Method": "addAARCTeamBranch",
+    "RelativePath": "api/Team/addTeamBranche/{TeamID}/{BranchID}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TeamID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "BranchID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TeamController",
+    "Method": "addAARCTeamMembers",
+    "RelativePath": "api/Team/addTeamMember/{TeamID}/{UIDs}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TeamID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "UIDs",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TeamController",
+    "Method": "addAARCTeamMgr",
+    "RelativePath": "api/Team/addTeamMgr/{TeamID}/{MgrID}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TeamID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "MgrID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TeamController",
+    "Method": "delAARCTeamAgency",
+    "RelativePath": "api/Team/deleteTeamAgency/{TeamID}/{AgencyID}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TeamID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "AgencyID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TeamController",
+    "Method": "delAARCTeamBranch",
+    "RelativePath": "api/Team/deleteTeamBranche/{TeamID}/{BranchID}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TeamID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "BranchID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TeamController",
+    "Method": "delAARCTeamMember",
+    "RelativePath": "api/Team/deleteTeamMember/{TeamID}/{UserID}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TeamID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "UserID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TeamController",
+    "Method": "delAARCTeamMgr",
+    "RelativePath": "api/Team/deleteTeamMgr/{TeamID}/{MgrID}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TeamID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "MgrID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TeamController",
+    "Method": "deleteAARCTeam",
+    "RelativePath": "api/Team/Team/{Id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TeamController",
+    "Method": "addAARCTeam",
+    "RelativePath": "api/Team/Team/{Id}/{Name}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TeamController",
+    "Method": "getAllAARCTeamAgencies",
+    "RelativePath": "api/Team/TeamAgencies/{TeamID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TeamID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TeamController",
+    "Method": "getTeamAvailableMembers",
+    "RelativePath": "api/Team/TeamAvailableMembers/{ID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TeamController",
+    "Method": "getAllAARCTeamBranches",
+    "RelativePath": "api/Team/teamBranches/{TeamID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TeamID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TeamController",
+    "Method": "GetTeamsByUser",
+    "RelativePath": "api/Team/TeamByUser/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TeamController",
+    "Method": "getAllAARCTeamMgrs",
+    "RelativePath": "api/Team/TeamManager",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TeamController",
+    "Method": "getAllAARCTeamMgrs",
+    "RelativePath": "api/Team/TeamManager/{TeamId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "TeamId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TeamController",
+    "Method": "getTeamStaff",
+    "RelativePath": "api/Team/teamStaff/{ID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TickerController",
+    "Method": "GetTickerItems",
+    "RelativePath": "api/Ticker",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TickerController",
+    "Method": "addAARCTickerItem",
+    "RelativePath": "api/Ticker",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ticker",
+        "Type": "AgencyAdmins.Model.TickerItem",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TickerController",
+    "Method": "deleteTickerItem",
+    "RelativePath": "api/Ticker",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ticker",
+        "Type": "AgencyAdmins.Model.TickerItem",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TimeZoneController",
+    "Method": "Get",
+    "RelativePath": "api/TimeZone",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TimeZoneController",
+    "Method": "update",
+    "RelativePath": "api/TimeZone/{timeZone}/{Id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "timeZone",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TimeZoneController",
+    "Method": "GetTimeZone",
+    "RelativePath": "api/TimeZone/timeZoneById/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TokenController",
+    "Method": "Post",
+    "RelativePath": "api/Token",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "AgencyAdmins.Model.UserInfo",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.TokenController",
+    "Method": "Changepassword",
+    "RelativePath": "api/Token/ChangePassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "changePassword",
+        "Type": "AgencyAdmins.Model.ChangePassword",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.UserController",
+    "Method": "delAARCUser",
+    "RelativePath": "api/User/{sUserID}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "sUserID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.UserController",
+    "Method": "getActiveDirUsers",
+    "RelativePath": "api/User/ActiveDirUsers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[AALib.clsAAUserInfo\u002BAAADUserInfo, AALib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.UserController",
+    "Method": "addAARCUser",
+    "RelativePath": "api/User/adduser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "AgencyAdmins.Model.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.UserController",
+    "Method": "CloneUser",
+    "RelativePath": "api/User/clone",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clone",
+        "Type": "AgencyAdmins.Model.CloneUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.UserController",
+    "Method": "updAARCUserInfo",
+    "RelativePath": "api/User/updateUser",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "user",
+        "Type": "AgencyAdmins.Model.User",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.UserController",
+    "Method": "updAARCUserContactInfo",
+    "RelativePath": "api/User/updateUserContactInfo",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "contact",
+        "Type": "AgencyAdmins.Model.Contact",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.UserController",
+    "Method": "updAARCUserSecLvl",
+    "RelativePath": "api/User/updateUserSecLvl/{userId}/{secLvl}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userID",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "secLvl",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.UserController",
+    "Method": "UserInfo",
+    "RelativePath": "api/User/UserInfo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.UserController",
+    "Method": "UserInfo",
+    "RelativePath": "api/User/UserInfo/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.UserController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/User/Users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.UWGLController",
+    "Method": "addAARCUWGLSubject",
+    "RelativePath": "api/UWGL/addAARCUWGLSubject/{Factor}/{Subj}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Factor",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Subj",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.UWGLController",
+    "Method": "updAARCUWGLFactor",
+    "RelativePath": "api/UWGL/updAARCUWGLFactor",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "uWGLFactor",
+        "Type": "AgencyAdmins.Model.UWGLFactor",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.UWGLController",
+    "Method": "updAARCUWGLSubject",
+    "RelativePath": "api/UWGL/updAARCUWGLSubject/{Factor}/{CurSubject}/{NewSubject}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Factor",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "CurSubject",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "NewSubject",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.UWGLController",
+    "Method": "updAARCUWGLGuideline",
+    "RelativePath": "api/UWGL/updAARCUWGLSubject/{Factor}/{Subject}/{Carrier}/{Guideline}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Factor",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Subject",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Carrier",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Guideline",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.UWGLController",
+    "Method": "getUWGLAllFactors",
+    "RelativePath": "api/UWGL/UWGLAllFactors",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.UWGLController",
+    "Method": "getUWGLData",
+    "RelativePath": "api/UWGL/UWGLData",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "uWGLData",
+        "Type": "AgencyAdmins.Model.UWGLData",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.UWGLController",
+    "Method": "getUWGLGuideLineByCarrier",
+    "RelativePath": "api/UWGL/UWGLGuideLineByCarrier/{Factor}/{Subj}/{CarrierID}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Factor",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Subj",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "CarrierID",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.UWGLController",
+    "Method": "getUWGLSubjectsByFactors",
+    "RelativePath": "api/UWGL/UWGLSubjectsByFactors/{Factor}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Factor",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

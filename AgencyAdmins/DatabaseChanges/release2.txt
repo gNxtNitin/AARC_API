@@ -1,0 +1,196 @@
+﻿ALTER PROCEDURE [dbo].[aarc_team_getall_teamagencies]   
+@sTeamID varchar(25) = null  
+AS  
+BEGIN  
+  Select t.team_id, a.* from AARCTeamsAgencies as t join AARCAgencies as a on t.agency_id = a.agency_id where team_id = @sTeamID order by a.agency_name  
+END 
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+ ALTER PROCEDURE [dbo].[aarc_carrier_get_contacts]     
+@iCarrierID int,    
+@sAgencyID varchar(25)    
+AS    
+BEGIN    
+ -- SET NOCOUNT ON added to prevent extra result sets from    
+ -- interfering with SELECT statements.    
+ SET NOCOUNT ON;    
+    
+    -- Insert statements for procedure here    
+ select * from AARCCarriersContacts where contact_carrier_id = @iCarrierID and (agency_id in (@sAgencyID, 'All Agencies'))    
+  order by contact_first_name  
+END 
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+ ALTER PROCEDURE [dbo].[aarc_team_get_staff]   
+@sID varchar (25)  
+AS  
+BEGIN  
+ select * from userinfo where    
+ CHARINDEX(concat(';', @sID, ';'), concat(';', replace(team_id, ' ', ''), ';')) > 0   
+ order by first_name  
+END  
+
+--19-08-21
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE TimeZone (
+  Id INT NOT NULL,
+  Name  VARCHAR(100) NOT NULL,
+  Code  VARCHAR(100),
+);
+
+INSERT INTO Timezone (id, name,code) VALUES (1, 'Eastern', 'Eastern')
+INSERT INTO Timezone (id, name,code) VALUES (2, 'Central', 'Central')
+INSERT INTO Timezone (id, name,code) VALUES (3, 'Mountain', 'Mountain')
+INSERT INTO Timezone (id, name,code) VALUES (4, 'Pacific', 'Pacific')
+INSERT INTO Timezone (id, name,code) VALUES (5, 'Alaskan', 'Alaskan')
+INSERT INTO Timezone (id, name,code) VALUES (6, 'Hawaiian', 'Hawaiian')
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+CREATE PROCEDURE [dbo].[aarc_timezone]    
+AS
+BEGIN     
+ select * from timezone   
+END 
+
+---------------------------------------------------------------------------------------------------------------------------
+
+CREATE TABLE AgencyTimeZone (
+  TimeZoneCode  VARCHAR(100) NOT NULL,
+  AgencyCode  VARCHAR(100) NOT NULL
+);
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+CREATE PROCEDURE [dbo].[aarc_timezone_update]    
+@timeZone VARCHAR(100),
+@agencyCode  VARCHAR(100)
+AS
+BEGIN     
+
+IF NOT EXISTS(SELECT * FROM AgencyTimeZone WHERE AgencyCode =@agencyCode)
+INSERT INTO AgencyTimeZone VALUES (@timeZone, @agencyCode)
+ELSE 
+UPDATE AgencyTimeZone SET TimeZoneCode = @timeZone WHERE AgencyCode = @agencyCode
+END 
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+
+CREATE PROCEDURE [dbo].[get_timezone]    
+@agencyCode  VARCHAR(100)
+AS
+BEGIN     
+SELECT * FROM AgencyTimeZone WHERE AgencyCode = @agencyCode
+END 
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+CREATE TABLE AGENCYTICKER (
+  AgencyCode  VARCHAR(100) NOT NULL,
+  TickerKey  VARCHAR(100) NOT NULL
+);
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+CREATE PROCEDURE [dbo].[aarc_AA_tickeritem_agency_add]  
+@sTickerExpr varchar(MAX),  
+@sTickerItem varchar(MAX),
+@AgencyCodeList varchar(MAX)
+AS  
+
+BEGIN  
+   
+ SET NOCOUNT ON;  
+  
+ DECLARE @sKey varchar(20) = '';  
+ SET @sKey = (select concat('AA_TICKER', max(cast(SUBSTRING(aarc_key,10, 1000) as int))+1) FROM AARCRegistry WHERE arac_key like 'AA_TICKER%')  
+   
+ INSERT INTO AARCRegistry VALUES (@sKey, @sTickerItem, @sTickerExpr)  
+
+ SELECT * INTO #AgencyTable from dbo.splitstring(@AgencyCodeList)
+
+ WHILE EXISTS (SELECT NAME FROM #AgencyTable)
+
+ BEGIN
+	DECLARE @Name VARCHAR(MAX)
+    SELECT TOP 1 @Name = name
+    FROM #AgencyTable
+    ORDER BY NAME ASC
+
+	INSERT INTO DBO.AGENCYTICKER VALUES(@Name, @sKey)
+	
+    DELETE #AgencyTable
+    WHERE NAME = @Name
+
+ END
+
+ DROP TABLE #AgencyTable
+
+SELECT * FROM AGENCYTICKER WHERE TickerKey=@sKey
+  
+END  
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+CREATE PROCEDURE [dbo].[aarc_AA_tickeritem_del_agency]   
+@sTickerExpr varchar(MAX),  
+@sTickerItem varchar(MAX),
+@sAgencyCode varchar(MAX)
+AS  
+BEGIN  
+ 
+ DECLARE @AARC_KEY VARCHAR(MAX)
+ SELECT @AARC_KEY = aarc_key FROM AARCRegistry WHERE aarc_key like 'AA_TICKER%' and CAST(aarc_desc as date) = CAST(@sTickerExpr as date) and aarc_value = @sTickerItem
+
+ DELETE FROM AGENCYTICKER
+ WHERE  TickerKey = @AARC_KEY AND AgencyCode = @sAgencyCode
+ 
+ IF NOT EXISTS(SELECT * FROM AGENCYTICKER WHERE TickerKey = @AARC_KEY)
+ DELETE FROM AARCRegistry   
+ WHERE aarc_key like 'AA_TICKER%' and CAST(aarc_desc as date) = CAST(@sTickerExpr as date) and aarc_value = @sTickerItem  
+  
+END 
+ 
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+
+CREATE PROCEDURE [dbo].[aarc_AA_tickeritem_get_agency]   
+AS  
+BEGIN  
+ -- SET NOCOUNT ON added to prevent extra result sets from  
+ -- interfering with SELECT statements.  
+ SET NOCOUNT ON;  
+
+
+ DECLARE @AARC_KEY VARCHAR(MAX)
+ SELECT @AARC_KEY = aarc_key FROM AARCRegistry WHERE aarc_key like 'AA_TICKER%' and CAST(aarc_desc as date) < CAST(GETDATE() as date)  
+  
+  
+ --Delete expired items  
+ Delete from AARCRegistry where aarc_key like 'AA_TICKER%' and CAST(aarc_desc as date) < CAST(GETDATE() as date)  
+
+ DELETE FROM AGENCYTICKER WHERE  TickerKey = @AARC_KEY
+  
+    -- Insert statements for procedure here  
+  
+ SELECT AR.* , CAST(SUBSTRING(aarc_key,11, 1000) AS INT) AS dSrtr, AT.AgencyCode,AG.agency_name  
+ FROM AARCRegistry AS AR INNER JOIN AGENCYTICKER AS AT ON AR.aarc_key = AT.TickerKey
+ INNER JOIN AARCAgencies AS AG ON AT.AgencyCode = AG.agency_id
+ WHERE aarc_key like 'AA_TICKER%' 
+ ORDER BY dSrtr  
+  
+END  

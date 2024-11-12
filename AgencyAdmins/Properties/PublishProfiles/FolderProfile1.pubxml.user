@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>D:\GNXT_Projects\Gnxt_Angular_Project\AgencyAdmin_Build\AARC_API</_PublishTargetUrl>
+    <History>True|2024-08-20T12:42:44.6910235Z;True|2024-08-14T12:16:33.1216031+05:30;True|2024-03-04T13:12:41.5148603+05:30;True|2024-03-01T10:47:25.2071802+05:30;True|2024-03-01T10:33:38.9456129+05:30;True|2024-03-01T10:06:35.1584095+05:30;True|2023-11-29T12:47:43.9776594+05:30;True|2023-11-29T12:44:24.6417843+05:30;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

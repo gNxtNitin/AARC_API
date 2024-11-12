@@ -1,0 +1,105 @@
+﻿
+ALTER TABLE USERINFO
+ADD password nvarchar(max)
+
+CREATE PROCEDURE [dbo].[aarc_update_Password]     
+@Email [varchar](100),    
+@Password [varchar](100)   
+AS    
+BEGIN    
+UPDATE userinfo SET password = @Password where email = @Email  
+END 
+
+
+
+-- =============================================  
+-- Author:  Rino Feole  
+-- Create date: 12/2/2017  
+-- Description: ADD AARC USER  
+-- =============================================  
+ALTER PROCEDURE [dbo].[aarc_user_add]   
+@sUserID varchar(50),  
+@sFname varchar(50),  
+@sLname varchar(50),  
+@sMname varchar(50),  
+@sSuffix varchar(10),  
+@sTeam varchar(25),  
+@sSec varchar(25),  
+@sPhone varchar(15),  
+@sCell varchar(15),  
+@sEmail varchar(150)  
+AS  
+BEGIN  
+  
+ BEGIN TRAN T1  
+  --Get Next Available AAID  
+  declare @iNextID int = 0;  
+  set @iNextID = (SELECT ISNULL(MAX(AAid)+ 1, 1) AS MaxX from userinfo)  
+  
+  -- Insert statements for procedure here  
+  INSERT INTO USERINFO VALUES(@iNextID, @sUserID, @sFname, @sLname, @sMname, @sSuffix, @sTeam, @sSec, @sPhone, @sCell, @sEmail, 1, 1,'V2VsY29tZTEyMw==')  
+  
+  INSERT INTO AARCProducerCodes select @sUserID, * from AARCProducerCodesShared   
+ COMMIT TRAN T1  
+END  
+
+--------------------------------------------------------------
+ALTER PROCEDURE [dbo].[aarc_user_clone]     
+@sSrcID varchar(50),    
+@sFN varchar(50),    
+@sLN varchar(50),    
+@sDestID varchar(50),    
+@email varchar(500)  
+AS    
+BEGIN    
+    
+ BEGIN TRAN T1    
+  --Get Next Available AAID    
+  declare @iNextID int = 0;    
+  set @iNextID = (SELECT ISNULL(MAX(AAid)+ 1, 1) AS MaxX from userinfo)    
+    
+  INSERT INTO USERINFO (AAid ,userid ,first_name ,last_name ,middle_name ,suffix ,team_id ,sec_level ,phone ,
+  cell ,email ,active_flag ,available_flag,password)    
+  SELECT @iNextID, @sDestID ,@sFN ,@sLN, '', '', team_id ,sec_level ,'' ,'' ,@email ,1 ,1,'V2VsY29tZUAxMjM='     
+  FROM USERINFO    
+  WHERE userid = @sSrcID    
+    
+  EXEC [dbo].[aarc_agency_producer_code_creds_import] @sSrcID, @sDestID    
+    
+ COMMIT TRAN T1    
+END
+
+-----------------------------------------------
+
+CREATE PROCEDURE [dbo].[aarc_user_getinfo_by_email]   
+@email varchar(500)   
+AS  
+BEGIN  
+ -- SET NOCOUNT ON added to prevent extra result sets from  
+ -- interfering with SELECT statements.  
+ SET NOCOUNT ON;  
+  
+ SELECT * from userinfo where email = @email  
+END  
+
+
+
+
+---------------------------------------------------------------
+
+-- =============================================  
+-- Author:  Rino Feole  
+-- Create date: 11/7/2019  
+-- Description: Retrieve AARCRegistry Value by Like Key  
+-- =============================================  
+ALTER PROCEDURE [dbo].[aarc_registry_get_like]   
+@sLikeKey varchar(100)  
+AS  
+BEGIN  
+ -- SET NOCOUNT ON added to prevent extra result sets from  
+ -- interfering with SELECT statements.  
+ SET NOCOUNT ON;  
+  
+    -- Insert statements for procedure here  
+ select * from AARCRegistry where aarc_key LIKE @sLikeKey+'%'  
+END  
