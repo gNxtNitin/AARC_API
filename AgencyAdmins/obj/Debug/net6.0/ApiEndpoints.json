@@ -1753,6 +1753,42 @@
   },
   {
     "ContainingType": "AgencyAdmins.Controllers.DocumentController",
+    "Method": "updAARCDoxCategory",
+    "RelativePath": "api/Document/{OldCategoryCode}/{OldCategoryName}/{NewDocumentCatCode}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "OldCategoryCode",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "OldCategoryName",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "NewDocumentCatCode",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.DocumentController",
     "Method": "getDocCats",
     "RelativePath": "api/Document/DocCategory",
     "HttpMethod": "GET",
@@ -3276,6 +3312,37 @@
     ]
   },
   {
+    "ContainingType": "AgencyAdmins.Controllers.TeamController",
+    "Method": "updateAARCTeam",
+    "RelativePath": "api/Team/UpdateTeam/{Id}/{Name}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "AgencyAdmins.Controllers.TickerController",
     "Method": "GetTickerItems",
     "RelativePath": "api/Ticker",
@@ -3566,6 +3633,32 @@
   },
   {
     "ContainingType": "AgencyAdmins.Controllers.UserController",
+    "Method": "DeleteUsers",
+    "RelativePath": "api/User/DeleteUsers/{userid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userid",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.UserController",
     "Method": "updAARCUserInfo",
     "RelativePath": "api/User/updateUser",
     "HttpMethod": "PUT",
@@ -3684,6 +3777,32 @@
     "ReturnTypes": [
       {
         "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.UserController",
+    "Method": "UserProdCodes",
+    "RelativePath": "api/User/UserProdCodes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "objprod",
+        "Type": "AgencyAdmins.Model.ProdCodes",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[AALib.clsAAUserInfo\u002BGetUserProdCodesInfo, AALib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

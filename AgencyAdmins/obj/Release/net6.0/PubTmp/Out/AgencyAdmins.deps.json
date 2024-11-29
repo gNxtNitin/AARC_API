@@ -422,7 +422,10 @@
       },
       "AALib/1.0.0": {
         "runtime": {
-          "AALib.dll": {}
+          "AALib.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "2.0.0.0"
+          }
         }
       }
     }

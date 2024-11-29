@@ -38,7 +38,7 @@ namespace AALib
         private bool pbActive = false;
         private bool pbAvailable = false;
 
-        public enum validStatus { Inactive = 0, Active = 1, All = 2 }
+        public enum validStatus { Inactive = 0, Active = 1, All = 2}
         #endregion
 
 
@@ -63,6 +63,7 @@ namespace AALib
             public string Middle_name = "";
             public string Suffix = "";
             public string AATeam = "";
+            public string AATeamName = "";
             public string AASecLevel = "";
             public string Phone = "";
             public string Cell = "";
@@ -89,6 +90,14 @@ namespace AALib
             public string Fname { get; set; }
             public string Lname { get; set; }
             public string Email { get; set; }
+        }
+
+        public class GetUserProdCodesInfo
+        {
+            public string agency_id { get; set; }
+            public string carrier_id { get; set; }
+            public string Userid { get; set; }
+            public string pwd { get; set; }
         }
 
         /// -----------------------------------------------------------------------------
@@ -278,7 +287,7 @@ namespace AALib
                 List<SqlParameter> lstParams = new List<SqlParameter>();
                 lstParams.Add(new SqlParameter("@iActive", (int)asStatus));
 
-                dtUI = AADal.AAExecuteTable(clsAA.validDBs.AARC, "aarc_user_getall_by_active_status", lstParams);
+                 dtUI = AADal.AAExecuteTable(clsAA.validDBs.AARC, "aarc_user_getall_by_active_status", lstParams);
 
 
                 //UInfo.AAID = dtUI.Rows[0]["AAID"].ToString().Trim();
@@ -292,7 +301,7 @@ namespace AALib
                 //UInfo.IsAvailable = (bool)dtUI.Rows[0]["available_flag"];
 
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 Console.WriteLine(ex.InnerException);
@@ -312,7 +321,7 @@ namespace AALib
             try
             {
                 List<SqlParameter> lstParams = new List<SqlParameter>();
-                // sUserId = "asmith";
+               // sUserId = "asmith";
                 lstParams.Add(new SqlParameter("@userid", sUserId));
 
                 DataTable dtUI = AADal.AAExecuteTable(clsAA.validDBs.AARC, "aarc_user_getinfo_by_userid", lstParams);
@@ -324,6 +333,7 @@ namespace AALib
                 UInfo.Middle_name = dtUI.Rows[0]["middle_name"].ToString().Trim();
                 UInfo.Suffix = dtUI.Rows[0]["suffix"].ToString().Trim();
                 UInfo.AATeam = dtUI.Rows[0]["team_id"].ToString().Trim();
+                UInfo.AATeamName = dtUI.Rows[0]["team_name"].ToString().Trim();
                 UInfo.AASecLevel = dtUI.Rows[0]["sec_level"].ToString().Trim();
                 UInfo.Phone = dtUI.Rows[0]["phone"].ToString().Trim();
                 UInfo.Cell = dtUI.Rows[0]["cell"].ToString().Trim();
@@ -365,6 +375,7 @@ namespace AALib
                 UInfo.Middle_name = dtUI.Rows[0]["middle_name"].ToString().Trim();
                 UInfo.Suffix = dtUI.Rows[0]["suffix"].ToString().Trim();
                 UInfo.AATeam = dtUI.Rows[0]["team_id"].ToString().Trim();
+                UInfo.AATeamName = dtUI.Rows[0]["team_name"].ToString().Trim();
                 UInfo.AASecLevel = dtUI.Rows[0]["sec_level"].ToString().Trim();
                 UInfo.Phone = dtUI.Rows[0]["phone"].ToString().Trim();
                 UInfo.Cell = dtUI.Rows[0]["cell"].ToString().Trim();
@@ -407,7 +418,7 @@ namespace AALib
                                 AAADUserInfo AAUser = new AAADUserInfo
                                 {
                                     AcctName = (de.Properties["samAccountName"].Value == null) ? "" : de.Properties["samAccountName"].Value.ToString(),
-                                    Fname = (de.Properties["givenName"].Value == null) ? "" : de.Properties["givenName"].Value.ToString(),
+                                    Fname = (de.Properties["givenName"].Value == null)? "": de.Properties["givenName"].Value.ToString(),
                                     Lname = (de.Properties["sn"].Value == null) ? "" : de.Properties["sn"].Value.ToString(),
                                     Email = (de.Properties["userPrincipalName"].Value == null) ? "" : de.Properties["userPrincipalName"].Value.ToString()
                                 };
@@ -433,6 +444,89 @@ namespace AALib
             return AAUsers;
         }
 
+        #endregion
+
+        public List<GetUserProdCodesInfo> GetProdCodesInfo(string carrierId, string userId, string pwd, string userType)
+        {
+            List<GetUserProdCodesInfo> lstUInfo = new List<GetUserProdCodesInfo>();
+            clsAA AADal = new clsAA();
+            try
+            {
+                List<SqlParameter> lstParams = new List<SqlParameter>();
+                lstParams.Add(new SqlParameter("@carrierid", carrierId));
+                lstParams.Add(new SqlParameter("@userid", userId));
+                lstParams.Add(new SqlParameter("@pwd", pwd));
+                lstParams.Add(new SqlParameter("@usertype", userType));
+
+                DataTable dtUI = AADal.AAExecuteTable(clsAA.validDBs.AARC, "aarc_user_ProdCodesinfo_by_userid", lstParams);
+                if (dtUI != null)
+                {
+                    //List<GetUserProdCodesInfo> employees = new List<GetUserProdCodesInfo>();
+                    foreach (DataRow row in dtUI.Rows)
+                    {
+                        GetUserProdCodesInfo employee = new GetUserProdCodesInfo();
+                        employee.agency_id = Convert.ToString(row["agency_name"]);
+                        employee.carrier_id = Convert.ToString(row["carrier_name"]);
+                        employee.Userid = Convert.ToString(row["uid"]);
+                        employee.pwd = Convert.ToString(row["pwd"]);
+                        lstUInfo.Add(employee);
+                    }
+                }
+
+                //var result = DataTableToJSONWithStringBuilder(dtUI);
+
+                //UInfo.agency_id = dtUI.Rows[0]["agency_id"].ToString().Trim();
+                //UInfo.carrier_id = dtUI.Rows[0]["carrier_id"].ToString().Trim();
+                //UInfo.Userid = dtUI.Rows[0]["uid"].ToString().Trim();
+                //UInfo.pwd = dtUI.Rows[0]["pwd"].ToString().Trim();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.InnerException);
+            }
+            finally
+            {
+                AADal = null;
+            }
+
+            return lstUInfo;
+        }
+
+        public string DataTableToJSONWithStringBuilder(DataTable table)
+        {
+            var JSONString = new StringBuilder();
+            if (table.Rows.Count > 0)
+            {
+                JSONString.Append("[");
+                for (int i = 0; i < table.Rows.Count; i++)
+                {
+                    JSONString.Append("{");
+                    for (int j = 0; j < table.Columns.Count; j++)
+                    {
+                        if (j < table.Columns.Count - 1)
+                        {
+                            JSONString.Append("\"" + table.Columns[j].ColumnName.ToString() + "\":" + "\"" + table.Rows[i][j].ToString() + "\",");
+                        }
+                        else if (j == table.Columns.Count - 1)
+                        {
+                            JSONString.Append("\"" + table.Columns[j].ColumnName.ToString() + "\":" + "\"" + table.Rows[i][j].ToString() + "\"");
+                        }
+                    }
+                    if (i == table.Rows.Count - 1)
+                    {
+                        JSONString.Append("}");
+                    }
+                    else
+                    {
+                        JSONString.Append("},");
+                    }
+                }
+                JSONString.Append("]");
+            }
+            return JSONString.ToString();
+        }
+
         public DataTable DailyNotificationsList()
         {
             DataTable dtUI = null;
@@ -454,7 +548,5 @@ namespace AALib
 
             return dtUI;
         }
-
-        #endregion
     }
 }

@@ -38,12 +38,12 @@ namespace AgencyAdmins.Controllers
             EmpInfo = await _service.GetEmployeeFullInfoList();
             //var result = await _service.GetWhosOutList();
             //var result = (await _service.GetWhosOutList()).Where(p => p.Start == DateTime.Now.ToString("yyyy-MM-dd")).ToList();
-            var result = (await _service.GetWhosOutList()).Where(p =>Convert.ToDateTime(p.Start) <= Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd")) && Convert.ToDateTime(p.End) >= Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd"))).ToList();
+            var result = (await _service.GetWhosOutList()).Where(p => Convert.ToDateTime(p.Start) <= Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd")) && Convert.ToDateTime(p.End) >= Convert.ToDateTime(DateTime.Now.ToString("yyyy-MM-dd"))).ToList();
             //var result = (await _service.GetWhosOutList()).Where(p => p.Start == "2024-11-2").ToList();
-            if (result.Count> 0)
+            if (result.Count > 0)
             {
                 resp.code = 200;
-                resp.msg = "Success";  
+                resp.msg = "Success";
                 string strserialize = JsonConvert.SerializeObject(result);
                 resp.data = strserialize;
 
@@ -51,7 +51,7 @@ namespace AgencyAdmins.Controllers
                 {
                     foreach (var item in EmpInfo.employees)
                     {
-                        if ( Convert.ToString(employee.EmployeeId) == item.id)
+                        if (Convert.ToString(employee.EmployeeId) == item.id)
                         {
                             employee.Image = item.photoUrl;
                         }
@@ -64,11 +64,11 @@ namespace AgencyAdmins.Controllers
                         string dayName = givenDate.ToString("dddd");
                         string monthName = givenDate.ToString("MMM");
                         int date = givenDate.Day;
-                        employee.OutUntilMessage = dayName +","+ monthName + " "+ date;
+                        employee.OutUntilMessage = dayName + "," + monthName + " " + date;
                     }
                 }
             }
-           return result;
+            return result;
         }
 
         [HttpGet("GetEmpImg")]
@@ -91,7 +91,7 @@ namespace AgencyAdmins.Controllers
         {
             BambooHrResponse resp = new BambooHrResponse();
             var result = await _service.GetEmployeeFullInfoList();
-            if (result.employees.Count> 0)
+            if (result.employees.Count > 0)
             {
                 resp.code = 200;
                 resp.msg = "Success";
@@ -142,6 +142,5 @@ namespace AgencyAdmins.Controllers
             }
             return whosOutList;
         }
-
     }
 }

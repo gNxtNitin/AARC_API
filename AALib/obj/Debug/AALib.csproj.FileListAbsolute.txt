@@ -47,6 +47,7 @@ C:\Users\DTL05\source\repos\AARC_API\AALib\bin\Debug\AALib.dll
 C:\Users\DTL05\source\repos\AARC_API\AALib\bin\Debug\AALib.pdb
 C:\Users\DTL05\source\repos\AARC_API\AALib\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\DTL05\source\repos\AARC_API\AALib\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\DTL05\source\repos\AARC_API\AALib\bin\Debug\Newtonsoft.Json.dll
 C:\Users\DTL05\source\repos\AARC_API\AALib\bin\Debug\System.Buffers.dll
 C:\Users\DTL05\source\repos\AARC_API\AALib\bin\Debug\System.Memory.dll
 C:\Users\DTL05\source\repos\AARC_API\AALib\bin\Debug\System.Numerics.Vectors.dll
@@ -54,6 +55,7 @@ C:\Users\DTL05\source\repos\AARC_API\AALib\bin\Debug\System.Runtime.CompilerServ
 C:\Users\DTL05\source\repos\AARC_API\AALib\bin\Debug\System.ValueTuple.dll
 C:\Users\DTL05\source\repos\AARC_API\AALib\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
 C:\Users\DTL05\source\repos\AARC_API\AALib\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\DTL05\source\repos\AARC_API\AALib\bin\Debug\Newtonsoft.Json.xml
 C:\Users\DTL05\source\repos\AARC_API\AALib\bin\Debug\System.Buffers.xml
 C:\Users\DTL05\source\repos\AARC_API\AALib\bin\Debug\System.Memory.xml
 C:\Users\DTL05\source\repos\AARC_API\AALib\bin\Debug\System.Numerics.Vectors.xml

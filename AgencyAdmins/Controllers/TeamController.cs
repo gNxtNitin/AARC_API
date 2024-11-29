@@ -280,6 +280,33 @@ namespace AgencyAdmins.Controllers
             return iRet;
         }
 
+        [Route("UpdateTeam/{Id}/{Name}")]
+        [HttpPost]
+        public async Task<int> updateAARCTeam(string Id, string Name)
+        {
+            AALib.clsAA oLib = new AALib.clsAA();
+            int iRet = 0;
+            try
+            {
+                List<SqlParameter> lstParams = new List<SqlParameter>();
+                lstParams.Add(new SqlParameter("@sID", Id));
+                lstParams.Add(new SqlParameter("@sName", Name));
+                iRet = oLib.AAExecuteNonQuery(clsAA.validDBs.AARC, "aarc_team_edit", lstParams);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.InnerException);
+                new LogException().logAARCErr(ex, Id + ";" + Name);
+            }
+            finally
+            {
+                oLib = null;
+            }
+
+            return iRet;
+        }
+
 
         [HttpDelete]
         [Route("deleteTeamMember/{TeamID}/{UserID}")]
@@ -576,6 +603,7 @@ namespace AgencyAdmins.Controllers
 
             return iRet;
         }
+
 
     }
 }

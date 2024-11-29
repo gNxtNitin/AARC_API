@@ -11,6 +11,7 @@ using Newtonsoft.Json;
 using System.Data;
 using System.Data.SqlClient;
 using System.Security.Claims;
+using static AALib.clsAAUserInfo;
 
 namespace AgencyAdmins.Controllers
 {
@@ -387,7 +388,53 @@ namespace AgencyAdmins.Controllers
             return sUsers;
         }
 
+        [Route("UserProdCodes")]
+        [HttpPost]
+        public async Task<List<AALib.clsAAUserInfo.GetUserProdCodesInfo>> UserProdCodes(ProdCodes objprod)
+        {
+            List < AALib.clsAAUserInfo.GetUserProdCodesInfo > objlst= new List<AALib.clsAAUserInfo.GetUserProdCodesInfo>();
+            AALib.clsAAUserInfo oUI = new AALib.clsAAUserInfo();
+            DataTable dtRet = new DataTable();
+            try
+            {
+                objlst = oUI.GetProdCodesInfo(objprod.carrierId, objprod.userid, objprod.password, objprod.branch);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.InnerException);
+            }
+            finally
+            {
+                oUI = null;
+            }
 
+            return (objlst);
+        }
+
+        [Route("DeleteUsers/{userid}")]
+        [HttpGet]
+        public async Task<int> DeleteUsers(string userid)
+        {
+            AALib.clsAA oLib = new AALib.clsAA();
+            int iRet = 0;
+            try
+            {
+                List<SqlParameter> lstParams = new List<SqlParameter>();
+                lstParams.Add(new SqlParameter("@userid", userid));
+                iRet = oLib.AAExecuteNonQuery(clsAA.validDBs.AARC, "aarc_make_user_inactive", lstParams);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.InnerException);
+            }
+            finally
+            {
+            }
+
+            return iRet;
+        }
     }
 }
 

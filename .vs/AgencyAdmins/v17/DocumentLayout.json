@@ -3,11 +3,15 @@
   "WorkspaceRootPath": "C:\\Users\\DTL05\\source\\repos\\AARC_API\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6CD4A67E-D5BF-4FAC-9A6C-7D148E30A9D8}|AgencyAdmins\\AgencyAdmins.csproj|c:\\users\\dtl05\\source\\repos\\aarc_api\\agencyadmins\\controllers\\documentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6CD4A67E-D5BF-4FAC-9A6C-7D148E30A9D8}|AgencyAdmins\\AgencyAdmins.csproj|solutionrelative:agencyadmins\\controllers\\documentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1ADE0C12-D40E-4CCA-BB77-20C1499EC19B}|AALib\\AALib.csproj|c:\\users\\dtl05\\source\\repos\\aarc_api\\aalib\\clsaa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1ADE0C12-D40E-4CCA-BB77-20C1499EC19B}|AALib\\AALib.csproj|solutionrelative:aalib\\clsaa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1ADE0C12-D40E-4CCA-BB77-20C1499EC19B}|AALib\\AALib.csproj|c:\\users\\dtl05\\source\\repos\\aarc_api\\aalib\\clsaauserinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1ADE0C12-D40E-4CCA-BB77-20C1499EC19B}|AALib\\AALib.csproj|C:\\Users\\DTL05\\source\\repos\\AARC_API\\aalib\\clsaauserinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1ADE0C12-D40E-4CCA-BB77-20C1499EC19B}|AALib\\AALib.csproj|solutionrelative:aalib\\clsaauserinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -31,19 +35,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "DocumentController.cs",
+              "DocumentMoniker": "C:\\Users\\DTL05\\source\\repos\\AARC_API\\AgencyAdmins\\Controllers\\DocumentController.cs",
+              "RelativeDocumentMoniker": "AgencyAdmins\\Controllers\\DocumentController.cs",
+              "ToolTip": "C:\\Users\\DTL05\\source\\repos\\AARC_API\\AgencyAdmins\\Controllers\\DocumentController.cs",
+              "RelativeToolTip": "AgencyAdmins\\Controllers\\DocumentController.cs",
+              "ViewState": "AgIAAL4AAAAAAAAAAAAcwBQAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-29T12:54:39.049Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "clsAA.cs",
               "DocumentMoniker": "C:\\Users\\DTL05\\source\\repos\\AARC_API\\AALib\\clsAA.cs",
               "RelativeDocumentMoniker": "AALib\\clsAA.cs",
               "ToolTip": "C:\\Users\\DTL05\\source\\repos\\AARC_API\\AALib\\clsAA.cs",
               "RelativeToolTip": "AALib\\clsAA.cs",
-              "ViewState": "AgIAAFoAAAAAAAAAAAAIwGsAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAowFAAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-29T12:36:00.711Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "clsAAUserInfo.cs",
               "DocumentMoniker": "C:\\Users\\DTL05\\source\\repos\\AARC_API\\AALib\\clsAAUserInfo.cs",
               "RelativeDocumentMoniker": "AALib\\clsAAUserInfo.cs",
@@ -51,12 +68,11 @@
               "RelativeToolTip": "AALib\\clsAAUserInfo.cs",
               "ViewState": "AgIAAKgBAAAAAAAAAAAcwLoBAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-29T12:33:03.998Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-29T12:33:03.998Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "BambooHRController.cs",
               "DocumentMoniker": "C:\\Users\\DTL05\\source\\repos\\AARC_API\\AgencyAdmins\\Controllers\\BambooHRController.cs",
               "RelativeDocumentMoniker": "AgencyAdmins\\Controllers\\BambooHRController.cs",

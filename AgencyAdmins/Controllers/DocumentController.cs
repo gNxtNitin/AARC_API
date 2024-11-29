@@ -187,6 +187,36 @@ namespace AgencyAdmins.Controllers
             }
         }
 
+        [Route("{OldCategoryCode}/{OldCategoryName}/{NewDocumentCatCode}")]
+        [HttpPost]
+        public async Task<int> updAARCDoxCategory(String OldCategoryCode, String OldCategoryName, String NewDocumentCatCode)
+        {
+            AALib.clsAA oLib = new AALib.clsAA();
+            int iRet = 0;
+            try
+            {
+
+                List<SqlParameter> lstParams = new List<SqlParameter>();
+                lstParams.Add(new SqlParameter("@oldCatCode", OldCategoryCode));
+                lstParams.Add(new SqlParameter("@selectedDocName", OldCategoryName));
+                lstParams.Add(new SqlParameter("@nweCatCode", NewDocumentCatCode));
+                iRet = oLib.AAExecuteNonQuery(clsAA.validDBs.AARC, "aarc_change_doccats_upd", lstParams);
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.InnerException);
+                new LogException().logAARCErr(ex, "");
+            }
+            finally
+            {
+                oLib = null;
+            }
+
+            return iRet;
+        }
+
 
     }
 }

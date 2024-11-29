@@ -134,7 +134,7 @@ namespace AALib
                                 sDBPass = DBPass;
                                 break;
                         }
-                        sRet = "data source=" + sDBServer + ";initial catalog=AARC_Sandbox;user id=" + sDBUser + ";password=" + sDBPass + ";persist security info=true";
+                        sRet = "data source=" + sDBServer + ";initial catalog=" + sDBCatalog + ";user id=" + sDBUser + ";password=" + sDBPass + ";persist security info=true";
                         break;
                     case validDBs.AARC:
                     default:
