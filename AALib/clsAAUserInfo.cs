@@ -38,7 +38,7 @@ namespace AALib
         private bool pbActive = false;
         private bool pbAvailable = false;
 
-        public enum validStatus { Inactive = 0, Active = 1, All = 2}
+        public enum validStatus { Inactive = 0, Active = 1, All = 2 }
         #endregion
 
 
@@ -231,6 +231,19 @@ namespace AALib
             }
         }
 
+        public class DailyNotifications
+        {
+            public int Id { get; set; }
+            public string Type { get; set; }
+            public string EmployeeId { get; set; }
+            public string Name { get; set; }
+            public string StartDate { get; set; }
+            public string EndDate { get; set; }
+            public string Image { get; set; }
+            public Boolean ShowDate { get; set; }
+            public string OutUntilMessage { get; set; }
+        }
+
         #endregion
 
         //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -265,7 +278,7 @@ namespace AALib
                 List<SqlParameter> lstParams = new List<SqlParameter>();
                 lstParams.Add(new SqlParameter("@iActive", (int)asStatus));
 
-                 dtUI = AADal.AAExecuteTable(clsAA.validDBs.AARC, "aarc_user_getall_by_active_status", lstParams);
+                dtUI = AADal.AAExecuteTable(clsAA.validDBs.AARC, "aarc_user_getall_by_active_status", lstParams);
 
 
                 //UInfo.AAID = dtUI.Rows[0]["AAID"].ToString().Trim();
@@ -279,7 +292,7 @@ namespace AALib
                 //UInfo.IsAvailable = (bool)dtUI.Rows[0]["available_flag"];
 
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 Console.WriteLine(ex.InnerException);
@@ -299,7 +312,7 @@ namespace AALib
             try
             {
                 List<SqlParameter> lstParams = new List<SqlParameter>();
-               // sUserId = "asmith";
+                // sUserId = "asmith";
                 lstParams.Add(new SqlParameter("@userid", sUserId));
 
                 DataTable dtUI = AADal.AAExecuteTable(clsAA.validDBs.AARC, "aarc_user_getinfo_by_userid", lstParams);
@@ -394,7 +407,7 @@ namespace AALib
                                 AAADUserInfo AAUser = new AAADUserInfo
                                 {
                                     AcctName = (de.Properties["samAccountName"].Value == null) ? "" : de.Properties["samAccountName"].Value.ToString(),
-                                    Fname = (de.Properties["givenName"].Value == null)? "": de.Properties["givenName"].Value.ToString(),
+                                    Fname = (de.Properties["givenName"].Value == null) ? "" : de.Properties["givenName"].Value.ToString(),
                                     Lname = (de.Properties["sn"].Value == null) ? "" : de.Properties["sn"].Value.ToString(),
                                     Email = (de.Properties["userPrincipalName"].Value == null) ? "" : de.Properties["userPrincipalName"].Value.ToString()
                                 };
@@ -418,6 +431,28 @@ namespace AALib
             }
 
             return AAUsers;
+        }
+
+        public DataTable DailyNotificationsList()
+        {
+            DataTable dtUI = null;
+            clsAA AADal = new clsAA();
+            try
+            {
+                List<SqlParameter> lstParams = new List<SqlParameter>();
+                dtUI = AADal.AAExecuteTable(clsAA.validDBs.AARC, "aarc_get_Daily_Notifications", lstParams);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.InnerException);
+            }
+            finally
+            {
+                AADal = null;
+            }
+
+            return dtUI;
         }
 
         #endregion

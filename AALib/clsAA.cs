@@ -113,10 +113,10 @@ namespace AALib
                 switch (GetEnvironment())
                 {
                     case "DEV":
-                        sDBCatalog = "AARC_Sandbox";
+                        sDBCatalog = "AARC_Sandbox2";
                         break;
                     default:
-                        sDBCatalog = "AARC_Sandbox";
+                        sDBCatalog = "AARC_Sandbox2";
                         break;
                 }
 

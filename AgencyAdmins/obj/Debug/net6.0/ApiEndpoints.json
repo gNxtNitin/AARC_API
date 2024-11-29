@@ -1134,6 +1134,26 @@
   },
   {
     "ContainingType": "AgencyAdmins.Controllers.BambooHRController",
+    "Method": "GetDailyNotificationsList",
+    "RelativePath": "api/BambooHR/GetDailyNotificationsList",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[AALib.clsAAUserInfo\u002BDailyNotifications, AALib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "AgencyAdmins.Controllers.BambooHRController",
     "Method": "GetEmpImg",
     "RelativePath": "api/BambooHR/GetEmpImg",
     "HttpMethod": "GET",
